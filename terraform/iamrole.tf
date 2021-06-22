@@ -23,7 +23,7 @@ EOF
 }
 
 resource "aws_iam_instance_profile" "role-instance-profile" {
-  name = "Role-Instance-Kubernetes-Rancher"
+  name = "Role-Instance-Kubernetes"
   role = "${aws_iam_role.role-k8s-s3.name}"
 }
 
