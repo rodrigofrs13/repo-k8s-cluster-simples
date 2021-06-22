@@ -21,6 +21,7 @@ sudo echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" > /etc/apt/sour
 sudo apt-get update
 sudo apt-get install -y kubelet kubeadm kubectl
 sudo kubeadm config images pull
+sudo git clone https://github.com/rodrigofrs13/repo-k8s-cluster-simples.git /home/ubuntu/k8s
 #sudo kubeadm init
 #sudo sleep 30
 #sudo mkdir -p $HOME/.kube
