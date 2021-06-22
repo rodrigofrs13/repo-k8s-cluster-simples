@@ -1,5 +1,5 @@
 resource "aws_iam_role_policy" "policy-k8s-s3" {
-  name = "Policy-${aws_s3_bucket.k8s-s3-rancher.id}" 
+  name = "Policy-k8s-s3" 
   role = "${aws_iam_role.role-k8s-s3.id}"
 
   policy = <<EOF
@@ -12,8 +12,8 @@ resource "aws_iam_role_policy" "policy-k8s-s3" {
       ],
       "Effect": "Allow",
       "Resource": [ 
-          "arn:aws:s3:::${aws_s3_bucket.k8s-s3-rancher.id}",
-          "arn:aws:s3:::${aws_s3_bucket.k8s-s3-rancher.id}/*"
+          "arn:aws:s3:::s3-k8s-estudos",
+          "arn:aws:s3:::s3-k8s-estudos/*"
       ]
     }
   ]
@@ -28,7 +28,7 @@ resource "aws_iam_instance_profile" "role-instance-profile" {
 }
 
 resource "aws_iam_role" "role-k8s-s3" {
-  name = "Role-${aws_s3_bucket.k8s-s3-rancher.id}"
+  name = "Role-bucket-s3-k8s"
   path = "/"
 
   assume_role_policy = <<EOF
