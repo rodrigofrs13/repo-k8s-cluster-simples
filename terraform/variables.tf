@@ -43,7 +43,7 @@ variable "type_instance_rancher_worker" {
 
 variable "tag_projeto" {
   description = "Define type from instance"
-  default = "Plataforma Rancher"
+  default = "K8S"
 }
 
 variable "tag_ambiente" {
