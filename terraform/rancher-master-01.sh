@@ -21,6 +21,7 @@ sudo echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" > /etc/apt/sour
 sudo apt-get update
 sudo apt-get install -y kubelet kubeadm kubectl
 sudo kubeadm config images pull
+curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash -
 sudo git clone https://github.com/rodrigofrs13/repo-k8s-cluster-simples.git /home/ubuntu/k8s
 #sudo kubeadm init
 #sudo sleep 30
