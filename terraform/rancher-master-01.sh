@@ -4,7 +4,9 @@ sudo apt-add-repository ppa:ansible/ansible -y
 sudo hostnamectl set-hostname k8s-master-01
 sudo apt install wget curl htop python git ansible awscli -y
 sudo echo "`curl http://169.254.169.254/latest/meta-data/local-ipv4`  k8s-master-01" >> /etc/hosts
-sudo git clone https://github.com/rodrigofrs13/k8s-cluster-simples.git
+sudo echo "172.31.89.141 k8s-worker-01" >> /etc/hosts
+sudo echo "172.31.87.9 k8s-worker-02" >> /etc/hosts
+#sudo git clone https://github.com/rodrigofrs13/k8s-cluster-simples.git
 sudo echo "br_netfilter" > /etc/modules-load.d/k8s.conf
 sudo echo "ip_vs" >> /etc/modules-load.d/k8s.conf
 sudo echo "ip_vs_rr" >> /etc/modules-load.d/k8s.conf
@@ -22,7 +24,7 @@ sudo apt-get update
 sudo apt-get install -y kubelet kubeadm kubectl
 sudo kubeadm config images pull
 curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash -
-sudo git clone https://github.com/rodrigofrs13/repo-k8s-cluster-simples.git /home/ubuntu/k8s
+#sudo git clone https://github.com/rodrigofrs13/repo-k8s-cluster-simples.git /home/ubuntu/k8s
 #sudo kubeadm init
 #sudo sleep 30
 #sudo mkdir -p $HOME/.kube
