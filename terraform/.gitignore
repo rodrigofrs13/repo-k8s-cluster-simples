@@ -4,6 +4,8 @@
 # .tfstate files
 *.tfstate
 *.tfstate.*
+rodrigofrs.pem
+rodrigofrsppk.ppk
 
 # Crash log files
 crash.log
