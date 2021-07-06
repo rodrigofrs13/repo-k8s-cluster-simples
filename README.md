@@ -1,2 +1,5 @@
 # k8s-cluster-simples
-k8s-cluster-simples (terraform/ansible/aws)
+k8s-cluster-simples (terraform/ansible/aws-ec2)
+
+
+
