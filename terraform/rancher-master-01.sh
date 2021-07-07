@@ -7,23 +7,23 @@ sudo echo "`curl http://169.254.169.254/latest/meta-data/local-ipv4`  k8s-master
 sudo echo "172.31.89.141 k8s-worker-01" >> /etc/hosts
 sudo echo "172.31.87.9 k8s-worker-02" >> /etc/hosts
 #sudo git clone https://github.com/rodrigofrs13/k8s-cluster-simples.git
-sudo echo "br_netfilter" > /etc/modules-load.d/k8s.conf
-sudo echo "ip_vs" >> /etc/modules-load.d/k8s.conf
-sudo echo "ip_vs_rr" >> /etc/modules-load.d/k8s.conf
-sudo echo "ip_vs_sh" >> /etc/modules-load.d/k8s.conf
-sudo echo "ip_vs_wrr" >> /etc/modules-load.d/k8s.conf
-sudo echo "nf_conntrack_ipv4" >> /etc/modules-load.d/k8s.conf
-sudo curl -fsSL https://get.docker.com | bash
-sudo mkdir -p /etc/systemd/system/docker.service.d
-sudo systemctl daemon-reload
-sudo systemctl restart docker
-sudo apt-get update && apt-get install -y apt-transport-https gnupg2
-sudo curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
-sudo echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" > /etc/apt/sources.list.d/kubernetes.list
-sudo apt-get update
-sudo apt-get install -y kubelet kubeadm kubectl
-sudo kubeadm config images pull
-curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash -
+#sudo echo "br_netfilter" > /etc/modules-load.d/k8s.conf
+#sudo echo "ip_vs" >> /etc/modules-load.d/k8s.conf
+#sudo echo "ip_vs_rr" >> /etc/modules-load.d/k8s.conf
+#sudo echo "ip_vs_sh" >> /etc/modules-load.d/k8s.conf
+#sudo echo "ip_vs_wrr" >> /etc/modules-load.d/k8s.conf
+#sudo echo "nf_conntrack_ipv4" >> /etc/modules-load.d/k8s.conf
+#sudo curl -fsSL https://get.docker.com | bash
+#sudo mkdir -p /etc/systemd/system/docker.service.d
+#sudo systemctl daemon-reload
+#sudo systemctl restart docker
+#sudo apt-get update && apt-get install -y apt-transport-https gnupg2
+#sudo curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
+#sudo echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" > /etc/apt/sources.list.d/kubernetes.list
+#sudo apt-get update
+#sudo apt-get install -y kubelet kubeadm kubectl
+#sudo kubeadm config images pull
+#curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash -
 #sudo git clone https://github.com/rodrigofrs13/repo-k8s-cluster-simples.git /home/ubuntu/k8s
 #sudo kubeadm init
 #sudo sleep 30

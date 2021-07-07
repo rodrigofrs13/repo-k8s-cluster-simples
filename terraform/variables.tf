@@ -20,7 +20,7 @@ variable "cidrinterno" {
 
 variable "keyname" {
   description = "Define key connect ssh"
-  default = "rodrigofrsppk"
+  default = "rodrigofrs"
 }
 
 variable "ami" {
