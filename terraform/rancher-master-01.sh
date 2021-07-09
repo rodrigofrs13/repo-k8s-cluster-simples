@@ -9,6 +9,9 @@ sudo echo "172.31.87.9 k8s-worker-02" >> /etc/hosts
 git clone https://github.com/rodrigofrs13/repo-k8s-cluster-simples.git /home/ubuntu/k8s
 sudo aws s3 cp s3://s3-k8s-estudos/rodrigofrs.pem .
 sudo chmod 400 rodrigofrs.pem
+sudo cd /home/ubuntu/k8s/install_k8s
+sudo ansible -vv -i hosts -m ping all
+sudo ansible-playbook -vv -i hosts main.yml
 #sudo echo "br_netfilter" > /etc/modules-load.d/k8s.conf
 #sudo echo "ip_vs" >> /etc/modules-load.d/k8s.conf
 #sudo echo "ip_vs_rr" >> /etc/modules-load.d/k8s.conf
