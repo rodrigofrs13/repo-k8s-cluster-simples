@@ -31,8 +31,8 @@
   roles: 
   - { role: install_helm, tags: ["install_helm3_role"] }
 
-- hosts: k8s-master
-  become: yes
-  user: ubuntu
-  roles: 
-  - { role: install_monit_tools, tags: ["install_monit_tools_role"] }
+#- hosts: k8s-master
+#  become: yes
+#  user: ubuntu
+#  roles: 
+#  - { role: install_monit_tools, tags: ["install_monit_tools_role"] }
