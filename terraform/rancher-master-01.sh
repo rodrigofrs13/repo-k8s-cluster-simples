@@ -6,7 +6,9 @@ sudo apt install wget curl htop python git ansible awscli -y
 sudo echo "`curl http://169.254.169.254/latest/meta-data/local-ipv4`  k8s-master-01" >> /etc/hosts
 sudo echo "172.31.89.141 k8s-worker-01" >> /etc/hosts
 sudo echo "172.31.87.9 k8s-worker-02" >> /etc/hosts
-#sudo git clone https://github.com/rodrigofrs13/k8s-cluster-simples.git
+git clone https://github.com/rodrigofrs13/repo-k8s-cluster-simples.git /home/ubuntu/k8s
+sudo aws s3 cp s3://s3-k8s-estudos/rodrigofrs.pem .
+sudo chmod 400 rodrigofrs.pem
 #sudo echo "br_netfilter" > /etc/modules-load.d/k8s.conf
 #sudo echo "ip_vs" >> /etc/modules-load.d/k8s.conf
 #sudo echo "ip_vs_rr" >> /etc/modules-load.d/k8s.conf
