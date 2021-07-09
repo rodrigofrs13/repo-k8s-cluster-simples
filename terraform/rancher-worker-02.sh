@@ -19,7 +19,7 @@ sudo echo "172.31.89.141 k8s-worker-01" >> /etc/hosts
 #sudo apt-get update && apt-get install -y apt-transport-https gnupg2
 #sudo curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
 #sudo echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" > /etc/apt/sources.list.d/kubernetes.list
-#sudo apt-get update
+sudo apt-get update
 #sudo apt-get install -y kubelet kubeadm kubectl
 #sudo git clone https://github.com/rodrigofrs13/repo-k8s-cluster-simples.git /home/ubuntu/k8s
 #sudo git clone http://algardeploy:aXb7ohyDRzxar_TwtrDA@gitlab.algartech.com/internos/cross/CCOE/template_automation/ansible/rancher.git /home/ubuntu/rancher-k8s
