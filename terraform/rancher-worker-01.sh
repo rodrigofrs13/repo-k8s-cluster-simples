@@ -13,7 +13,7 @@ sudo echo "172.31.86.220 k8s-master-01" >> /etc/hosts
 #sudo echo "ip_vs_wrr" >> /etc/modules-load.d/k8s.conf
 #sudo echo "nf_conntrack_ipv4" >> /etc/modules-load.d/k8s.conf
 #sudo curl -fsSL https://get.docker.com | bash
-sudo mkdir -p /etc/systemd/system/docker.service.d
+#sudo mkdir -p /etc/systemd/system/docker.service.d
 #sudo systemctl daemon-reload
 #sudo systemctl restart docker
 #sudo apt-get update && apt-get install -y apt-transport-https gnupg2
