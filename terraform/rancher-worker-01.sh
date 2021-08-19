@@ -1,5 +1,5 @@
 #! /bin/bash
-sudo apt update
+sudo apt-get update && apt-get upgrade -y
 sudo apt-add-repository ppa:ansible/ansible -y
 sudo hostnamectl set-hostname k8s-worker-01
 sudo apt install wget curl htop python git ansible awscli -y

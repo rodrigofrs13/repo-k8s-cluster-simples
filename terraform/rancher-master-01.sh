@@ -1,5 +1,5 @@
 #! /bin/bash
-sudo apt update
+sudo apt-get update && apt-get upgrade -y
 sudo apt-add-repository ppa:ansible/ansible -y
 sudo hostnamectl set-hostname k8s-master-01
 sudo apt install wget curl htop python git ansible awscli -y
@@ -10,8 +10,8 @@ sudo git clone https://github.com/rodrigofrs13/repo-k8s-cluster-simples.git /hom
 sudo aws s3 cp s3://s3-k8s-estudos/rodrigofrs.pem .
 sudo chmod 400 rodrigofrs.pem
 cd /home/ubuntu/k8s/install_k8s
-sudo ansible -vv -i hosts -m ping all
-sudo ansible-playbook -vv -i hosts main.yml
+#sudo ansible -vv -i hosts -m ping all
+#sudo ansible-playbook -vv -i hosts main.yml
 #sudo echo "br_netfilter" > /etc/modules-load.d/k8s.conf
 #sudo echo "ip_vs" >> /etc/modules-load.d/k8s.conf
 #sudo echo "ip_vs_rr" >> /etc/modules-load.d/k8s.conf

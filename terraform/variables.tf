@@ -25,7 +25,8 @@ variable "keyname" {
 
 variable "ami" {
   description = "The name for the AMI - AWS"
-  default = "ami-09e67e426f25ce0d7"       // Ubuntu 18.04
+  default = "ami-09e67e426f25ce0d7" // Ubuntu 20.04
+//  default = "ami-09e67e426f25ce0d7"       // Ubuntu 18.04
 //  default = "ami-0fc61db8544a617ed"         // Amazon Linux
 }
 
