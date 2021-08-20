@@ -6,6 +6,7 @@ sudo apt install wget curl htop python git ansible awscli -y
 sudo echo "`curl http://169.254.169.254/latest/meta-data/local-ipv4`  k8s-worker-01" >> /etc/hosts
 sudo echo "172.31.87.9 k8s-worker-02" >> /etc/hosts
 sudo echo "172.31.86.220 k8s-master-01" >> /etc/hosts
+#
 #sudo echo "br_netfilter" > /etc/modules-load.d/k8s.conf
 #sudo echo "ip_vs" >> /etc/modules-load.d/k8s.conf
 #sudo echo "ip_vs_rr" >> /etc/modules-load.d/k8s.conf
