@@ -6,6 +6,7 @@
 *.tfstate.*
 rodrigofrs.pem
 rodrigofrsppk.ppk
+.terraform.lock.hcl
 
 # Crash log files
 crash.log
