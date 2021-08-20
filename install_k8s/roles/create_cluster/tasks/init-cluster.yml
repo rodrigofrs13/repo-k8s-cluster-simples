@@ -6,7 +6,7 @@
 
 - name: Inicializando o cluster k8s
   command:
-    kubeadm init
+    kubeadm init --kubernetes-version 1.21.0
   register: kubeadm_init
   changed_when: '"initialized successfully" in kubeadm_init.stdout'
 
